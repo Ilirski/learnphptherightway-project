@@ -21,13 +21,13 @@ class View
 
     public function render(): string
     {
-        $viewPath = VIEW_PATH . '/' . $this->view . '.php';
+        $viewPath = VIEW_PATH.'/'.$this->view.'.php';
 
-        if (! file_exists($viewPath)) {
+        if (!file_exists($viewPath)) {
             throw new ViewNotFoundException();
         }
 
-        foreach($this->params as $key => $value) {
+        foreach ($this->params as $key => $value) {
             $$key = $value;
         }
 

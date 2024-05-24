@@ -8,6 +8,9 @@
         <title>Document</title>
     </head>
     <body>
-        Home Page
+        <form action="/upload" method="post", enctype="multipart/form-data">
+            <input type="file" name="transactions[]" accept="text/csv" multiple/>
+            <button type="submit">Upload CSVs</button>
+        </form>
     </body>
 </html>
